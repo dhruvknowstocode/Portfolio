@@ -7,8 +7,9 @@
   background-color: var(--background-color); /* Adapt to your theme */
   z-index: 1000;
   padding: 15px 20px;
+  padding-right: 20px; /* Adjust padding-right for spacing */
   display: flex;
-  justify-content: flex-end; /* Shift navbar items to the right */
+  justify-content: flex-end; /* Space out navbar items */
   align-items: center; /* Center items vertically */
 }
 
@@ -21,15 +22,13 @@
   transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
   position: absolute; /* Position absolutely */
   top: 100%; /* Position below the navbar */
-  right: 1rem; /* Align to the right side */
+  right: 0; /* Align to the right side */
   background-color: var(--background-color); /* Ensure background color matches */
-  width: 200px; /* Adjust width as needed */
+  width: 180px; /* Adjust width as needed */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
-  transform: translateY(-100%); /* Hide offscreen */
+  transform: translateY(-100%); /* Hide offscreen initially */
   opacity: 0; /* Start hidden */
-  gap: 1rem;
   z-index: 1100; /* Ensure it’s above other content */
-  margin-right: 15rem; /* Increase margin to the right */
 }
 
 .navLinks.active {
@@ -43,7 +42,7 @@
   padding: 10px;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
-  margin: 0; /* Remove right margin */
+  margin: 0 14px; /* Add horizontal margin to create spacing between links */
 }
 
 .link:hover {
@@ -52,9 +51,11 @@
 }
 
 .menuToggle {
-  display: none;
+  display: block; /* Ensure icon is visible */
   cursor: pointer;
   z-index: 1200; /* Ensure it’s above the dropdown */
+  position: relative; /* Ensure proper positioning */
+  margin-right: 2rem;
 }
 
 .bar {
@@ -66,38 +67,42 @@
   transition: all 0.3s ease;
 }
 
+/* Media Query for Tablets and Small Laptops */
 @media (min-width: 520px) {
   .navLinks {
-      flex-direction: row;
-      position: static; /* Reset positioning */
-      background-color: transparent; /* Transparent background */
-      width: auto; /* Reset width */
-      box-shadow: none; /* Remove shadow */
-      transform: none; /* Ensure it is visible */
-      opacity: 1; /* Ensure it is visible */
-      margin-right: 20px; /* Increase margin to the right */
+    flex-direction: row;
+    position: static; /* Reset positioning */
+    background-color: transparent; /* Transparent background */
+    width: auto; /* Reset width */
+    box-shadow: none; /* Remove shadow */
+    transform: none; /* Ensure it is visible */
+    opacity: 1; /* Ensure it is visible */
+    margin: 0; /* Reset margin */
+    right: auto; /* Ensure it aligns properly */
   }
 
   .menuToggle {
-      display: none;
+    display: none;
   }
 }
 
+/* Media Query for Mobile Devices */
 @media (max-width: 519px) {
   .navLinks {
-      display: flex; /* Ensure display in flex mode */
-      flex-direction: column;
-      top: 60px; /* Position below the navbar */
-      right: 0; /* Align to the right side */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
-      margin-right: 15rem; /* Increase margin to the right */
+    display: flex; /* Ensure display in flex mode */
+    flex-direction: column;
+    top: 60px; /* Position below the navbar */
+    right: 0; /* Align to the right side */
+    width: 180px; /* Adjust width to make it compact */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
+    margin: 0; /* Remove any extra margin */
   }
 
   .menuToggle {
-      display: block;
-      position: absolute; /* Position absolutely */
-      top: 15px; /* Distance from the top */
-      right: 3rem; /* Distance from the right */
-      z-index: 1200; /* Ensure it’s above the dropdown */
+    display: block;
+    position: absolute; /* Position absolutely */
+    top: 15px; /* Distance from the top */
+    right: 20px; /* Distance from the right to align with the dropdown */
+    z-index: 1200; /* Ensure it’s above the dropdown */
   }
 }

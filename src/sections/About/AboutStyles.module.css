@@ -1,0 +1,58 @@
+.aboutMe {
+  height: auto; /* Allow height to adjust based on content */
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.aboutMe h2 {
+  font-size: 2rem;
+  margin-bottom: 15px; /* Adjust margin to fit the content */
+}
+
+.aboutMe p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 90%; /* Responsive width */
+  margin: 0 auto;
+  padding: 0 10px; /* Add padding for better readability */
+}
+
+/* Media Query for Tablets and Small Laptops */
+@media (min-width: 800px) {
+  .aboutMe {
+      height: auto; /* Allow height to adjust based on content */
+      padding: 30px;
+  }
+
+  .aboutMe h2 {
+      font-size: 2.2rem; /* Slightly larger font size */
+  }
+
+  .aboutMe p {
+      font-size: 1.1rem; /* Slightly larger font size */
+      max-width: 80%; /* Increase max-width */
+  }
+}
+
+/* Media Query for Desktops */
+@media (min-width: 1400px) {
+  .aboutMe {
+      height: auto; /* Allow height to adjust based on content */
+      padding: 40px;
+  }
+
+  .aboutMe h2 {
+      font-size: 2.5rem; /* Larger font size */
+  }
+
+  .aboutMe p {
+      font-size: 1.2rem; /* Larger font size */
+      max-width: 70%; /* Further increase max-width */
+  }
+}
