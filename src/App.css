@@ -107,3 +107,13 @@
     }
   }
   
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding-top: 80px; /* Adjust based on the height of your navbar */
+    min-height: 100vh; /* Ensures each section takes up the full screen height */
+  }
+  
