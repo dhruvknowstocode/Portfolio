@@ -1,71 +1,73 @@
 /* NavbarStyles.module.css */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color); /* Adapt to your theme */
-    z-index: 1000;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between; /* Space out navbar items */
-    align-items: center; /* Center items vertically */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color); /* Adapt to your theme */
+  z-index: 1000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end; /* Shift navbar items to the right */
+  align-items: center; /* Center items vertically */
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+  position: absolute; /* Position absolutely */
+  top: 100%; /* Position below the navbar */
+  right: 1rem; /* Align to the right side */
+  background-color: var(--background-color); /* Ensure background color matches */
+  width: 200px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
+  transform: translateY(-100%); /* Hide offscreen */
+  opacity: 0; /* Start hidden */
+  gap: 1rem;
+  z-index: 1100; /* Ensure it’s above other content */
+  margin-right: 15rem; /* Increase margin to the right */
+}
+
+.navLinks.active {
+  transform: translateY(0); /* Show in view */
+  opacity: 1; /* Fade in */
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color); /* Adapt to your theme */
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0; /* Remove right margin */
+}
+
+.link:hover {
+  color: var(--btn-color); /* Adapt to your theme */
+  transform: scale(1.1);
+}
+
+.menuToggle {
+  display: none;
+  cursor: pointer;
+  z-index: 1200; /* Ensure it’s above the dropdown */
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color); /* Adapt to your theme */
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 520px) {
   .navLinks {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
-    position: absolute; /* Position absolutely */
-    top: 100%; /* Position below the navbar */
-    right: 0; /* Align to the right side */
-    background-color: var(--background-color); /* Ensure background color matches */
-    width: 200px; /* Adjust width as needed */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
-    transform: translateY(-100%); /* Hide offscreen */
-    opacity: 0; /* Start hidden */
-    z-index: 1100; /* Ensure it’s above other content */
-  }
-  
-  .navLinks.active {
-    transform: translateY(0); /* Show in view */
-    opacity: 1; /* Fade in */
-  }
-  
-  .link {
-    text-decoration: none;
-    color: var(--text-color); /* Adapt to your theme */
-    padding: 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    margin: 0; /* Remove right margin */
-  }
-  
-  .link:hover {
-    color: var(--btn-color); /* Adapt to your theme */
-    transform: scale(1.1);
-  }
-  
-  .menuToggle {
-    display: none;
-    cursor: pointer;
-    z-index: 1200; /* Ensure it’s above the dropdown */
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color); /* Adapt to your theme */
-    margin: 5px auto;
-    transition: all 0.3s ease;
-  }
-  
-  @media (min-width: 520px) {
-    .navLinks {
       flex-direction: row;
       position: static; /* Reset positioning */
       background-color: transparent; /* Transparent background */
@@ -73,28 +75,29 @@
       box-shadow: none; /* Remove shadow */
       transform: none; /* Ensure it is visible */
       opacity: 1; /* Ensure it is visible */
-    }
-  
-    .menuToggle {
-      display: none;
-    }
+      margin-right: 20px; /* Increase margin to the right */
   }
-  
-  @media (max-width: 519px) {
-    .navLinks {
+
+  .menuToggle {
+      display: none;
+  }
+}
+
+@media (max-width: 519px) {
+  .navLinks {
       display: flex; /* Ensure display in flex mode */
       flex-direction: column;
       top: 60px; /* Position below the navbar */
       right: 0; /* Align to the right side */
       box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
-    }
-  
-    .menuToggle {
+      margin-right: 15rem; /* Increase margin to the right */
+  }
+
+  .menuToggle {
       display: block;
       position: absolute; /* Position absolutely */
       top: 15px; /* Distance from the top */
       right: 3rem; /* Distance from the right */
       z-index: 1200; /* Ensure it’s above the dropdown */
-    }
   }
-  
+}
