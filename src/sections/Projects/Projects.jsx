@@ -28,12 +28,12 @@ function Projects() {
           h3="Go-Yum"
           p="Food ordering app"
         />
-        {/* <ProjectCard
-          src={hipsster}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Hipsster"
-          p="Glasses Shop"
-        /> */}
+        <ProjectCard
+          src={viberr}
+          link="https://github.com/dhruvknowstocode/WeatherApp"
+          h3="SkyCast"
+          p="Weather App"
+        />
       </div>
     </section>
   );
