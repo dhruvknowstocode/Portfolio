@@ -1,8 +1,32 @@
 .container {
-    text-align: center;
-    p {
-      font-size: 16px;
-      color: var(--footer-text-color);
-    }
+  background-color: var(--background-color); /* Matches the site's theme */
+  padding: 20px 0; /* Adds vertical spacing */
+  text-align: center;
+  border-top: 1px solid var(--border-color); /* Adds a subtle top border */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds slight depth */
+  margin-top: 40px; /* Adds space from the content above */
+}
+
+p {
+  font-size: 16px; /* Standard font size for clarity */
+  color: var(--footer-text-color); /* Ensures the text color matches the theme */
+  margin: 0; /* Removes default margin */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Enhances padding and spacing for larger screens */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px 0;
   }
-  
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 40px 0;
+  }
+
+  p {
+    font-size: 18px; /* Slightly larger text for better readability on large screens */
+  }
+}

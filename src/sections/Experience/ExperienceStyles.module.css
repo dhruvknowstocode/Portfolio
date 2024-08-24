@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--background-color);
+}
+
+.sectionTitle {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.experienceItem {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  color: var(--text-color);
+}
+
+.experienceItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.jobTitle {
+  margin: 0 0 10px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.companyName {
+  margin: 5px 0 15px;
+  font-size: 1.3rem;
+  color: var(--form-text-color);
+}
+
+.jobDates {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.jobDescription {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.link {
+  font-size: 1rem;
+  color: var(--btn-color);
+  text-decoration: underline;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.link:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+@media (min-width: 800px) {
+  .experienceContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .experienceItem {
+    max-width: 45%; /* Allow the items to be side by side */
+    flex: 1;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 80px 40px;
+  }
+
+  .experienceItem {
+    max-width: 40%; /* Slightly narrower for large screens */
+  }
+}
