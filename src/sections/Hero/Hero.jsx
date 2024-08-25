@@ -6,6 +6,9 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
+import instaLight from '../../assets/instagram-light.svg';
+import instaDark from '../../assets/instagram-dark.svg';
+
 import CV from '../../assets/CV.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
@@ -15,6 +18,7 @@ function Hero() {
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const instaIcon = theme === 'light' ? instaLight : instaDark;
 
   return (
     <section id="hero" className={styles.container}>
@@ -44,6 +48,9 @@ function Hero() {
           </a>
           <a href="https://www.linkedin.com/in/dhruv-jain-7000b6227/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
+          </a>
+          <a href="https://www.instagram.com/dhruv__2003?igsh=ZDRwbWJ4a2QyMzBo" target="_blank">
+            <img src={instaIcon} alt="Insta icon" />
           </a>
         </span>
         <p className={styles.description}>
