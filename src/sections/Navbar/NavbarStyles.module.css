@@ -47,6 +47,7 @@
 
 .link:hover {
   color: var(--btn-color); /* Adapt to your theme */
+  text-decoration: underline;
   transform: scale(1.1);
 }
 
@@ -96,6 +97,10 @@
     width: 180px; /* Adjust width to make it compact */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for better visibility */
     margin: 0; /* Remove any extra margin */
+  }
+
+  .link:hover{
+    text-decoration: none;
   }
 
   .menuToggle {
