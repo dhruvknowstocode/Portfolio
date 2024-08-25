@@ -1,5 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import viberr from "../../assets/viberr.png";
+import airbnb1 from '../../assets/airbnb.jpg';
+import airbnb2 from '../../assets/airbnb.png';
 import freshBurger from "../../assets/fresh-burger.png";
 import hipsster from "../../assets/hipsster.png";
 import fitLift from "../../assets/fitlift.png";
@@ -17,7 +19,7 @@ function Projects() {
           p="Fitness App"
         />
         <ProjectCard
-          src={viberr}
+          src={airbnb1}
           link="https://github.com/dhruvknowstocode/WanderLust"
           h3="WanderLust"
           p="Airbnb App"

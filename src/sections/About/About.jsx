@@ -11,7 +11,7 @@ function AboutMe() {
         in the ever-evolving tech landscape.
       </p>
       <p>
-        I completed my studies at USICT and have gained valuable experience through internships, including a recent role as a backend developer 
+        I completed my studies at USICT and have gained valuable experience through internships, including a recent role as a fullstack developer 
         at Modelens, where I played a key role in developing their platform from the ground up. My journey in tech has been fueled by a deep 
         curiosity and a desire to solve complex problems.
       </p>
