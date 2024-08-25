@@ -19,7 +19,7 @@ function Projects() {
           p="Fitness App"
         />
         <ProjectCard
-          src={airbnb1}
+          src={airbnb2}
           link="https://github.com/dhruvknowstocode/WanderLust"
           h3="WanderLust"
           p="Airbnb App"
