@@ -6,7 +6,7 @@
   width: 100%;
   background-color: var(--background-color); /* Adapt to your theme */
   z-index: 1000;
-  padding: 15px 20px;
+  padding: 15px 10px;
   padding-right: 20px; /* Adjust padding-right for spacing */
   display: flex;
   justify-content: flex-end; /* Space out navbar items */
@@ -68,7 +68,7 @@
 }
 
 /* Media Query for Tablets and Small Laptops */
-@media (min-width: 520px) {
+@media (min-width: 685px) {
   .navLinks {
     flex-direction: row;
     position: static; /* Reset positioning */
@@ -87,7 +87,7 @@
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 519px) {
+@media (max-width: 684px) {
   .navLinks {
     display: flex; /* Ensure display in flex mode */
     flex-direction: column;
