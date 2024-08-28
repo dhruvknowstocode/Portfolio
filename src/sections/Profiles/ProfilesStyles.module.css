@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 4rem;
+    background-color: var(--background-color);
+  }
+  
+  .sectionTitle {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .profileContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .profileItem {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    color: var(--text-color);
+    text-align: center;
+    flex: 1 1 280px; /* Allows flexibility and sets a base width */
+    max-width: 300px; /* Optional: Control max width to prevent items from growing too large */
+  }
+  
+  .profileItem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileImage {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 15px;
+  }
+  
+  .platformName {
+    margin: 0 0 10px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .problemSolved, .streak {
+    margin: 5px 0 15px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+  
+  .link {
+    font-size: 1rem;
+    color: var(--btn-color);
+    text-decoration: underline;
+    margin-top: 15px;
+    display: inline-block;
+    transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 1200px) {
+    .profileItem {
+      padding: 15px;
+    }
+  
+    .profileImage {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .platformName {
+      font-size: 1.5rem;
+    }
+  
+    .problemSolved, .streak {
+      font-size: 1rem;
+    }
+  
+    .link {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .profileItem {
+      padding: 10px;
+    }
+  
+    .profileImage {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .platformName {
+      font-size: 1.25rem;
+    }
+  
+    .problemSolved, .streak {
+      font-size: 0.9rem;
+    }
+  
+    .link {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sectionTitle {
+      font-size: 1.75rem;
+    }
+  
+    .profileItem {
+      padding: 8px;
+    }
+  
+    .profileImage {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .platformName {
+      font-size: 1.1rem;
+    }
+  
+    .problemSolved, .streak {
+      font-size: 0.8rem;
+    }
+  
+    .link {
+      font-size: 0.7rem;
+    }
+  }
+  

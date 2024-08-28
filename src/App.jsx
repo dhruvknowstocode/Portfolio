@@ -7,6 +7,7 @@ import Navbar from './sections/Navbar/Navbar'
 import Projects from './sections/Projects/Projects'
 import Skills from './sections/Skills/Skills'
 import About from './sections/About/About'
+import Profiles from './sections/Profiles/Profiles'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Profiles />
       <Projects />
       <Experience />
       <Skills />

@@ -14,6 +14,7 @@ function Navbar() {
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
           <li><a href="#hero" className={styles.link}>Home</a></li>
           <li><a href="#about" className={styles.link}>About Me</a></li>
+          <li><a href="#profile" className={styles.link}>Profiles</a></li>
           <li><a href="#projects" className={styles.link}>Projects</a></li>
           <li><a href="#experience" className={styles.link}>Experience</a></li>
           <li><a href="#skills" className={styles.link}>Skills</a></li>
