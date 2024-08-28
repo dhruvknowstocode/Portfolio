@@ -7,7 +7,7 @@ function Profile() {
       <h1 className={styles.sectionTitle}>My Profiles</h1>
       <div className={styles.profileContainer}>
         <div className={styles.profileItem}>
-          <img src="/src/sections/Profiles/leetcode.png" alt="LeetCode" className={styles.profileImage} />
+          <img src="/images/leetcode.png" alt="LeetCode" className={styles.profileImage} />
           <div className={styles.profileContent}>
             <h2 className={styles.platformName}>LeetCode</h2>
             <p className={styles.problemSolved}>Problems Solved: 370</p>
@@ -16,7 +16,7 @@ function Profile() {
           </div>
         </div>
         <div className={styles.profileItem}>
-          <img src="/src/sections/Profiles/gfg.png" alt="GeeksforGeeks" className={styles.profileImage} />
+          <img src="/images/gfg.png" alt="GeeksforGeeks" className={styles.profileImage} />
           <div className={styles.profileContent}>
             <h2 className={styles.platformName}>GeeksforGeeks</h2>
             <p className={styles.problemSolved}>Problems Solved: 192</p>
@@ -25,7 +25,7 @@ function Profile() {
           </div>
         </div>
         <div className={styles.profileItem}>
-          <img src="/src/sections/Profiles/codingninja.png" alt="Coding Ninjas" className={styles.profileImage} />
+          <img src="/images/codingninja.png" alt="Coding Ninjas" className={styles.profileImage} />
           <div className={styles.profileContent}>
             <h2 className={styles.platformName}>Coding Ninjas</h2>
             <p className={styles.problemSolved}>Problems Solved: 260</p>
